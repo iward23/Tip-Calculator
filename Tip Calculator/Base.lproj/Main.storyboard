@@ -54,6 +54,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <imageReference key="minimumValueImage" image="0.circle" catalog="system" symbolScale="large"/>
                                 <imageReference key="maximumValueImage" image="30.circle" catalog="system" symbolScale="large" variableValue="1"/>
+                                <connections>
+                                    <action selector="tipSlider_Change:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zqa-Dv-V46"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfj-69-hUB">
                                 <rect key="frame" x="16" y="528" width="108" height="23"/>
@@ -75,6 +78,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Reset"/>
                                 <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tp7-0j-kMv"/>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ch-cU-7eJ"/>
                                     <action selector="tipSlider_Change:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mst-Zz-3gr"/>
                                 </connections>
                             </button>
@@ -83,6 +88,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Calculate "/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aii-Fs-Cww"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6Z-rO-4Od">
                                 <rect key="frame" x="224" y="529" width="42" height="21"/>
@@ -114,6 +122,9 @@
                                     <segment title="20%"/>
                                     <segment title="Custom"/>
                                 </segments>
+                                <connections>
+                                    <action selector="controlChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Yh-G7-NjA"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJi-jA-p9d">
                                 <rect key="frame" x="123" y="634" width="148" height="67"/>
